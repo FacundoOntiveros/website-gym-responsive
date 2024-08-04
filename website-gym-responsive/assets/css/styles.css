@@ -355,7 +355,7 @@ background-color: var(--first-color-dark);
 }
 
 /*=============== PROGRAMS ===============*/
-.program__container{
+.programs__container{
   grid-template-columns: 225px;
   justify-content: center;
   row-gap: 2rem;
@@ -728,4 +728,277 @@ color: var(--first-color);
 /* Show Scroll Up*/
 .show-scroll{
 bottom: 3rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px){
+  .container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .section__titles{
+    flex-direction: column;
+    row-gap: .25rem;
+  }
+
+  .home__data{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .home__triangle,
+  .classes__triangle{
+    height: 255px;
+  }
+  .home__triangle-3,
+  .classes__triangle-1{
+    width: 260px;
+  }
+
+  .classes__img{
+    width: 195px;
+  }
+
+  .plans__container{
+    grid-template-columns: 250px;
+  }
+  .plan__card{
+    padding: 1.5rem;
+  }
+
+  .footer__content{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px){
+  .nav__menu{
+    width: 50%;
+  }
+
+  .home__container,
+  .classes__container{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .home__data{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .home__data,
+  .classes__content .section__data,
+  .classes__description{
+    text-align: initial;
+  }
+
+  .programs__container{
+    grid-template-columns: repeat(2, 225px);
+    gap: 2.5rem;
+  }
+
+  .classes__content{
+    order: 1;
+  }
+  .classes__data{
+    justify-items: flex-start;
+  }
+  .classes__content .section__titles{
+    justify-content: initial;
+  }
+
+  .plans__container{
+    grid-template-columns: repeat(2, 285px);
+    gap: 2.5rem;
+  }
+
+  .footer__container{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+
+  .footer__content{
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1023px){
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+  .nav__menu{
+    width: initial;
+  }
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+  .nav__list{
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    column-gap: 4rem;
+  }
+
+  .section{
+    padding: 7rem 0 0;
+  }
+  .section__subtitle{
+    font-size: 2rem;
+  }
+
+  .home__container{
+    grid-template-columns: repeat(2, max-content);
+    align-items: initial;
+  }
+ 
+  .home__title{
+    margin: .75rem 0 1.25rem;
+  }
+
+  .home__subtitle, .home__title{
+    font-size: var(--bigger-font-size);
+
+  }
+
+  .home__description{
+    width: 500px;
+    margin-bottom: 3rem;
+  }
+  .home__img{
+    width: 550px;
+    transform: translateX(-6rem);
+  }
+  .home__triangle{
+    height: 700px;
+  }
+  .home__triangle-1{
+    width: 145px;
+  }
+  .home__triangle-2{
+    width: 345px;
+  }
+  .home__triangle-3{
+    width: 545px;
+  }
+
+  .classes__overflow{
+    overflow: hidden;
+  }
+  .classes__img{
+    width: 350px;
+  }
+  .classes__triangle{
+    height: 700px;
+  }
+  .classes__triangle-1{
+    width: 545px;
+  }
+  .classes__triangle-2{
+    width: 345px;
+  }
+  .classes__triangle-3{
+    width: 145px;
+  }
+
+  .footer{
+    padding-bottom: 3rem;
+  }
+  .footer__form{
+    flex-direction: row;
+  }
+  .footer__content{
+    column-gap: 5rem;
+  }
+  .footer__group{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    margin-top: 7rem; 
+  }
+  .footer__social{
+    order: 1;
+  }
+}
+
+@media screen and (min-width: 1150px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__data{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .home__images{
+    transform: translateX(3.5rem);
+  }
+  .home__img{
+    width: 700px;
+    transform: translateX(-1rem);
+  }
+  .home__triangle{
+    height: 999px;
+  }
+  .home__triangle-1{
+    width: 209px;
+  }
+  .home__triangle-2{
+    width: 509px;
+  }
+  .home__triangle-3{
+    width: 709px;
+  }
+
+  .programs__container{
+    grid-template-columns: repeat(4, 245px);
+    padding: 3rem 0;
+  }
+  .program__card{
+    padding: 2rem;
+  }
+  .program__description{
+    font-size: var(--normal-font-size);
+  }
+
+  .classes__container{
+    column-gap: 8rem;
+  }
+  .classes__img{
+    width: 450px;
+    margin: 0 0 0 auto;
+  }
+  .classes__triangle{
+    height: 800px;
+  }
+  .classes__images{
+    position: relative;
+  }
+  .classes__data{
+    grid-template-columns: repeat(2, max-content);
+    gap: 2.5rem 8rem;
+  }
+  .classes__description{
+    width: 418px;
+    margin-bottom: 3.5rem;
+  }
+
+  .plans__container{
+    padding-top: 3rem;
+    grid-template-columns: repeat(3, 320px);
+  }
+  .plan__card{
+    padding: 2rem 3.5rem;
+    row-gap: 2.5rem;
+  }
+  .scrollup{
+    right: 3rem;
+  }
 }
