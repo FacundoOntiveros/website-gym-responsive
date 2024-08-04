@@ -497,3 +497,88 @@ background-color: var(--first-color-dark);
   z-index: 1;
   margin: 0 auto;
 }
+
+/*=============== PLANS ===============*/
+.plans__container{
+  grid-template-columns: 285px;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+.plan__card,
+.plan__shape,
+.plan__list{
+  display: grid;
+}
+
+.plan__card{
+  row-gap: 2rem;
+  background-color: hsla(79, 6%, 64%, .07);
+  padding: 2rem 2.5rem;
+}
+
+.plan__img{
+  width: 35px;
+}
+
+.plan__shape{
+  width: 60px;
+  height: 60px;
+  background-color: var(--first-color-gray);
+  border-radius: 50%;
+  place-items: center;
+  margin-bottom: 1rem;
+}
+
+.plan__title{
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+  font-size: var(--h1-font-size);
+}
+
+.plan__list{
+  row-gap: 1rem;
+}
+
+.plan__item{
+  display: flex;
+  column-gap: .5rem;
+  align-items: center;
+  font-size: var(--small-font-size);
+}
+
+.plan__item i{
+font-size: 1.25rem;
+color: var(--first-color);
+}
+
+.plan__item-opacity{
+  opacity: .3;
+}
+
+.plan__button{
+  background-color: var(--text-color);
+}
+
+.plan__button:hover{
+  background-color: var(--text-color);
+}
+
+.plan__card-active{
+  background-color: var(--first-color);
+  border: 2px solid var(--first-color-light);
+}
+
+.plan__card-active .plan__shape{
+  background-color: var(--first-color-light);
+}
+
+.plan__card-active .plan__item i{
+  color: var(--title-color);
+}
+
+.plan__card-active .plan__title,
+.plan__card-active .plan__number,
+.plan__card-active .plan__item{
+  color: var(--title-color-black);
+}
