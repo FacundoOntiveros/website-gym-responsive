@@ -72,3 +72,12 @@ sr.reveal(`.logos__img, .program__card, .pricing__card`, {interval: 100})
 sr.reveal(`.choose__img, .calculate__content`, {origin: 'left'})
 sr.reveal(`.choose__content, .calculate__img`, {origin: 'right'}
 )
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+const scrollHeader = () =>{
+    const header = document.getElementById('header')
+    //when the scroll is greater than 50 viewport height, add the scroll-header//
+    this.scrollY >= 50  ? header.classList.add('bg-header')
+                        : header.classList.remove('bg-header')
+                      }
+   window.addEventListener('scroll', scrollHeader)
