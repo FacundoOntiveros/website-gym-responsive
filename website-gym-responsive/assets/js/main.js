@@ -68,9 +68,9 @@ delay: 400,
 
 sr.reveal(`.home__data, .footer__container, .footer__group`)
 sr.reveal(`.home__img`, {delay:700, origin: 'bottom'})
-sr.reveal(`.logos__img, .program__card, .pricing__card`, {interval: 100})
-sr.reveal(`.choose__img, .calculate__content`, {origin: 'left'})
-sr.reveal(`.choose__content, .calculate__img`, {origin: 'right'}
+sr.reveal(`.program__card, .plan__card`, {interval: 100})
+sr.reveal(`.classes__img`, {origin: 'left'})
+sr.reveal(`.classes__content`, {origin: 'right'}
 )
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
@@ -81,3 +81,48 @@ const scrollHeader = () =>{
                         : header.classList.remove('bg-header')
                       }
    window.addEventListener('scroll', scrollHeader)
+
+   /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+contactMessage  = document.getElementById('contact-message'),
+contactUser = document.getElementById('contact-user')
+
+const sendEmail = (e) =>{
+e.preventDefault()
+
+// Check if the field has a value
+if (contactUser.value === ''){
+// Add and remove color
+contactMessage.classList.remove('color-green')
+contactMessage.classList.add('color-red')
+
+// Show message
+contactMessage.textContent = 'Por favor ingresa tu Email 👆'
+
+//Remove message three seconds
+setTimeout(() =>{
+contactMessage.textContent = ''
+}, 4000)
+}else{
+// serviceID - templateID - #form - publickey
+emailjs.sendForm('service_poxx963','template_375cxq6','#contact-form','XMZJ31bq1FnQ5ebmS')
+.then(() =>{
+  // Show message and add color
+  contactMessage.classList.add('color-green')
+  contactMessage.textContent  = 'Se envió correctamente. Pronto estaremos en contacto ✔️'
+  
+  // Remove message after three seconds
+  setTimeout(() =>{
+      contactMessage.textContent  = ''
+  }, 4000)
+}, (error) =>{
+  //Mail sending error
+  alert('UPS! ALGO HA FALLADO...', error)
+})
+
+// To clear the input field
+contactUser.value = ''
+}
+}
+
+contactForm.addEventListener('submit', sendEmail)
