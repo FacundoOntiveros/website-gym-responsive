@@ -332,13 +332,15 @@
                     </p>
 
                     <form action="" class="footer__form" id="contact-form">
-                        <input type="email" name="user_email" placeholder="Tu Email" class="footer__input" id="contact-user">
+                        <input type="text" name="from_name" placeholder="Tu nombre" class="footer__input" id="from_name">
+                        <input type="email" name="email_id" placeholder="Tu email" class="footer__input" id="email_id">
+                        <input type="text" name="message" rows="3" placeholder="Mensaje" class="footer__input" id="message">
                         <button type="submit" class="button">
                             Enviar
                         </button>
                     </form>
 
-                    <p class="footer__message" id="contact-message">Mensaje</p>
+                    <p class="footer__message" id="contact-message"></p>
                 </div>
 
                 <div class="footer__content">
@@ -410,7 +412,10 @@
         <!--=============== SCROLLREVEAL ===============-->
         <script src="assets/js/scrollreveal.min.js"></script>
         <!--=============== EMAIL JS ===============-->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+        emailjs.init('Ni7vDY3USNEd-Bmh9')
+        </script>
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
     </body>

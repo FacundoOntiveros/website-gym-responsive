@@ -83,15 +83,19 @@ const scrollHeader = () =>{
    window.addEventListener('scroll', scrollHeader)
 
    /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
+const contactForm = document.getElementById('contact-form')
+const serviceID = 'service_9jftxyq'
+
 contactMessage  = document.getElementById('contact-message'),
-contactUser = document.getElementById('contact-user')
+contactUsername = document.getElementById('from_name'),
+contactEmail = document.getElementById('email_id'),
+contactMsg = document.getElementById('message')
 
 const sendEmail = (e) =>{
 e.preventDefault()
 
 // Check if the field has a value
-if (contactUser.value === ''){
+if (contactEmail.value === ''){
 // Add and remove color
 contactMessage.classList.remove('color-green')
 contactMessage.classList.add('color-red')
@@ -104,12 +108,13 @@ setTimeout(() =>{
 contactMessage.textContent = ''
 }, 4000)
 }else{
+emailjs.init(serviceID)
 // serviceID - templateID - #form - publickey
-emailjs.sendForm('service_poxx963','template_375cxq6','#contact-form','XMZJ31bq1FnQ5ebmS')
+emailjs.sendForm(serviceID,'template_11zcfug','#contact-form','Ni7vDY3USNEd-Bmh9')
 .then(() =>{
   // Show message and add color
   contactMessage.classList.add('color-green')
-  contactMessage.textContent  = 'Se envió correctamente. Pronto estaremos en contacto ✔️'
+  contactMessage.textContent  = 'Se envió correctamente ✔️'
   
   // Remove message after three seconds
   setTimeout(() =>{
@@ -121,7 +126,9 @@ emailjs.sendForm('service_poxx963','template_375cxq6','#contact-form','XMZJ31bq1
 })
 
 // To clear the input field
-contactUser.value = ''
+contactEmail.value = ''
+contactUsername.value = ''
+contactMsg.value = ''
 }
 }
 

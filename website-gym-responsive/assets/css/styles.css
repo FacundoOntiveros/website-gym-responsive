@@ -603,11 +603,12 @@ color: var(--first-color);
 }
 
 .footer__input{
-  padding: 20px 56px 20px 24px;
+  padding: 10px 56px 10px 24px;
   border: 2px solid var(--first-color-light);
   background: transparent;
   color: var(--text-color);
   outline: none;
+  resize:none;
 }
 
 .footer__content,
@@ -892,10 +893,12 @@ bottom: 3rem;
     padding-bottom: 3rem;
   }
   .footer__form{
-    flex-direction: row;
+    flex-direction: column;
   }
   .footer__content{
-    column-gap: 5rem;
+    column-gap: 6rem;
+    justify-content: center;
+    margin-top: 3rem; 
   }
   .footer__group{
     grid-template-columns: repeat(2, max-content);
