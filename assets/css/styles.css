@@ -288,7 +288,11 @@ img {
 
 .home__description{
   margin-bottom: 2.5rem;
-  letter-spacing: 1px
+  margin-top: 2rem;
+  letter-spacing: .2rem;;
+  padding: 2px;
+  font-size: 14px;
+  text-align: justify;
 }
 
 .home__triangle{
@@ -543,13 +547,13 @@ color: var(--first-color);
   opacity: .3;
 }
 
-.plan__button{
+/*.plan__button{
   background-color: var(--text-color);
 }
 
 .plan__button:hover{
   background-color: var(--text-color);
-}
+}*/
 
 .plan__card-active{
   background-color: var(--first-color);
@@ -736,6 +740,10 @@ bottom: 3rem;
     padding-right: 60px;
   }
 
+  .home__description{
+    letter-spacing: 3px;
+  }
+
   .home__triangle,
   .classes__triangle{
     height: 255px;
@@ -859,6 +867,7 @@ bottom: 3rem;
     width: 500px;
     margin-top: 3rem;
     margin-bottom: 1rem;
+    font-size: 15px;
   }
   .home__img{
     width: 550px;
