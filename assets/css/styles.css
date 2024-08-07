@@ -292,7 +292,7 @@ img {
   letter-spacing: .2rem;;
   padding: 2px;
   font-size: 14px;
-  text-align: justify;
+  text-align: center;
 }
 
 .home__triangle{
@@ -740,10 +740,6 @@ bottom: 3rem;
     padding-right: 60px;
   }
 
-  .home__description{
-    letter-spacing: 3px;
-  }
-
   .home__triangle,
   .classes__triangle{
     height: 255px;
@@ -868,6 +864,7 @@ bottom: 3rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
     font-size: 15px;
+    text-align: justify;
   }
   .home__img{
     width: 550px;
