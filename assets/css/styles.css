@@ -480,6 +480,11 @@ background-color: var(--first-color-dark);
   margin: 0 auto;
 }
 
+/*.video{
+  object-fit: cover;
+  vertical-align: middle;
+}*/
+
 /*=============== PLANS ===============*/
 .plans__container{
   grid-template-columns: 285px;
@@ -805,7 +810,8 @@ bottom: 3rem;
   }
 
   .footer__content{
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(2, max-content);
+    padding: 10px;
   }
 }
 
@@ -851,7 +857,8 @@ bottom: 3rem;
 
   .home__description{
     width: 500px;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
   .home__img{
     width: 550px;
@@ -903,7 +910,7 @@ bottom: 3rem;
   .footer__group{
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
-    margin-top: 7rem; 
+    margin-top: 2rem;
   }
   .footer__social{
     order: 1;
@@ -917,8 +924,8 @@ bottom: 3rem;
   }
 
   .home__data{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
   }
